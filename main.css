@@ -6,7 +6,11 @@
 .navigation {
     width: 100vw;
     height: 100vh;
-    background-image: url("https://www.vishenkkok.nl/wp-content/uploads/2019/03/AdobeStock_183424638-scaled.jpeg");
+    background: url("images/header.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .navbar {
     display: flex;
@@ -14,10 +18,12 @@
     height: 85px;
     justify-content: space-evenly;
     align-content: center;
+    overflow-y: hidden;
 }
 
 .nav-links {
     margin-top: 31px;
+    overflow: hidden;
 }
 
 .nav-item {
@@ -39,36 +45,20 @@ a:link {
     color: white;
 
 }
-
-.logo {
-    font-size: 36px;
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-    font-weight: 600;
-    margin-top: 14px;
-}
-
-.text {
+.container {
     display: flex;
     align-content: center;
     justify-content: center;
     margin-top: 12%;
 }
 
-h1, h2 {
+h1 {
     font-weight: 200;
     margin: 0.4rem;
-    font-family: "Assistant ExtraLight";
-    color: white;
-}
-
-h1 {
     font-size: 3.5rem;
-}
+    color: #ffffff;
+    font-family: "Assistant ExtraLight";
 
-h2 {
-    font-size: 2rem;
-    color: #aaa;
 }
 
 /* Cursor */
@@ -81,6 +71,7 @@ h2 {
         font-size: 5rem;
     }
 }
+
 
 @media(max-width: 800px) {
     .container {
@@ -96,8 +87,11 @@ h2 {
     h1 {
         font-size: 2.5rem;
     }
-
-    h2 {
-        font-size: 1.5rem;
-    }
+}
+.home-p {
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    margin-top: 25px;
+    font-family: "Open Sans";
 }
