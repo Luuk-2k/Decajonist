@@ -5,28 +5,27 @@
     <title>Ed Millstream's</title>
     <link href="main.css" rel="stylesheet">
     <link href="hover.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Assistant|Montserrat|Open+Sans|Roboto&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400&family=Montserrat&family=Open+Sans&family=Roboto&display=swap"
           rel="stylesheet">
-</head>
+   </head>
 <body>
 <div class="navigation">
     <nav class="navbar">
         <ul class="nav-links">
-            <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="index.html">Welkom</a></li>
-            <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="about.html">Kennis maken met
+            <li class="nav-item hvr-underline-from-left"><a href="index.html" style="color: white;">Welkom</a></li>
+            <li class="nav-item hvr-underline-from-left"><a href="about.html" style="color: white;">Kennis maken met
                 Ed</a></li>
-            <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="cajon.html">Kennismaken met de
+            <li class="nav-item hvr-underline-from-left"><a href="cajon.html" style="color: white;">Kennismaken met de
                 Cajon</a></li>
 
         </ul>
     </nav>
-    <nav class="navbar" STYLE="margin-top: -30px">
+    <nav class="navbar" style="margin-top: -30px">
         <ul class="nav-links">
-            <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="gallery.html">Ed's Galerij</a>
+            <li class="nav-item hvr-underline-from-left"><a href="gallery.html" style="color: white;">Ed's Galerij</a>
             </li>
-            <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="contact.html">Contact met Ed</a>
+            <li class="nav-item hvr-underline-from-left"><a href="contact.php" style="color: white;">Contact met Ed</a>
             </li>
-            <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="#">Ed's Links</a></li>
 
         </ul>
     </nav>
@@ -37,59 +36,15 @@
     <p class="home-p">Hi, ik ben Ed Millstream, de cajonist. Tof dat je mijn site bezoekt: dé plek waar je meer te weten
         komt over de
         Cajon en mijn avonturen als cajonist. </p>
+    <h2 class="video-title">Check hier mijn nieuwste hit!</h2>
+    <div class="video-container">
+
+        <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                class="video" frameborder="0" height="315"
+                src="https://www.youtube.com/embed/zva-0YuJk5I"
+                width="560"></iframe>
+    </div>
 
 </div>
-
-<!--<script>-->
-<!--    class TypeWriter {-->
-<!--        constructor(txtElement, words, wait = 3000) {-->
-<!--            this.txtElement = txtElement;-->
-<!--            this.words = words;-->
-<!--            this.txt = '';-->
-<!--            this.wordIndex = 0;-->
-<!--            this.wait = parseInt(wait, 10);-->
-<!--            this.type();-->
-<!--            this.isDeleting = false;-->
-<!--        }-->
-
-<!--        type() {-->
-<!--            const current = this.wordIndex % this.words.length;-->
-<!--            const fullTxt = this.words[current];-->
-<!--            if (this.isDeleting) {-->
-<!--                this.txt = fullTxt.substring(0, this.txt.length - 1);-->
-<!--            } else {-->
-<!--                this.txt = fullTxt.substring(0, this.txt.length + 1);-->
-<!--            }-->
-<!--            this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;-->
-<!--            let typeSpeed = 300;-->
-
-<!--            if (this.isDeleting) {-->
-<!--                typeSpeed /= 2;-->
-<!--            }-->
-
-<!--            if (!this.isDeleting && this.txt === fullTxt) {-->
-<!--                typeSpeed = this.wait;-->
-<!--                this.isDeleting = true;-->
-<!--            } else if (this.isDeleting && this.txt === '') {-->
-<!--                this.isDeleting = false;-->
-<!--                this.wordIndex++;-->
-<!--                typeSpeed = 500;-->
-<!--            }-->
-
-<!--            setTimeout(() => this.type(), typeSpeed);-->
-<!--        }-->
-<!--    }-->
-
-
-<!--    document.addEventListener('DOMContentLoaded', init);-->
-
-<!--    // Init App-->
-<!--    function init() {-->
-<!--        const txtElement = document.querySelector('.txt-type');-->
-<!--        const words = JSON.parse(txtElement.getAttribute('data-words'));-->
-<!--        const wait = txtElement.getAttribute('data-wait');-->
-<!--        new TypeWriter(txtElement, words, wait);-->
-<!--    }-->
-<!--</script>-->
 </body>
 </html>

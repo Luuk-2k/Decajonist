@@ -1,49 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Gallerij</title>
     <link href="hover.css" rel="stylesheet">
     <link href="gallery.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Assistant|Montserrat|Open+Sans|Roboto&display=swap"
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+          integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400&family=Montserrat&family=Open+Sans&family=Roboto&display=swap"
           rel="stylesheet">
 </head>
 <body>
 <nav class="navbar" style="border-bottom: none; margin-bottom: -3px">
     <ul class="nav-links">
-        <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="index.html">Welkom</a></li>
-        <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="about.html">Kennis maken met Ed</a>
+        <li class="nav-item hvr-underline-from-left"><a href="index.html" style="color: white;">Welkom</a></li>
+        <li class="nav-item hvr-underline-from-left"><a href="about.html" style="color: white;">Kennis maken met Ed</a>
         </li>
-        <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="cajon.html">Kennismaken met de
+        <li class="nav-item hvr-underline-from-left"><a href="cajon.html" style="color: white;">Kennismaken met de
             Cajon</a></li>
     </ul>
 </nav>
 <nav class="navbar" style="height: 39px">
     <ul class="nav-links" style="margin-top: 4px;">
-        <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="gallery.html">Ed's Galerij</a></li>
-        <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="contact.html">Contact met Ed</a></li>
-        <li class="nav-item hvr-underline-from-left"><a style="color: white;" href="#">Ed's Links</a></li>
+        <li class="nav-item hvr-underline-from-left"><a href="gallery.html" style="color: white;">Ed's Galerij</a></li>
+        <li class="nav-item hvr-underline-from-left"><a href="contact.php" style="color: white;">Contact met Ed</a>
+        </li>
     </ul>
 </nav>
-<div class="row">
-    <div class="column">
-        <img src="images/vroegah.png" style="width:100%">
-        <img src="images/vroegah.png" style="width:100%">
-        <img src="images/vroegah.png" style="width:100%">
+<div class="content">
+    <div class="container">
+        <div class="image-gallery">
+            <a class="img-1" href="images/img-3.jpg">
+                <i class="icon fas fa-expand"></i> </a>
+            <a class="img-2" href="images/img-2.jpg" target="_blank">
+                <i class="icon fas fa-expand"></i> </a>
+            <a class="img-3" href="images/img-1.jpg" target="_blank">
+                <i class="icon fas fa-expand"></i> </a>
+            <a class="img-4" href="images/img-4.jpg" target="_blank">
+                <i class="icon fas fa-expand"></i> </a>
+            <a class="img-5" href="images/img-5.jpeg" target="_blank">
+                <i class="icon fas fa-expand"></i> </a>
+            <a class="img-6" href="images/img-6.jpg" target="_blank">
+                <i class="icon fas fa-expand"></i> </a>
+            <a class="img-7" href="images/img-7.jpeg" target="_blank">
+                <i class="icon fas fa-expand"></i> </a>
+            <a class="img-8" href="images/img-8.JPG" target="_blank">
+                <i class="icon fas fa-expand"></i> </a>
+        </div>
     </div>
-    <div class="column">
-        <img src="https://i.picsum.photos/id/565/200/300.jpg" style="width:100%">
-        <img src="https://i.picsum.photos/id/565/200/300.jpg" style="width:100%">
-        <img src="https://i.picsum.photos/id/565/200/300.jpg" style="width:100%">
-        <img src="https://i.picsum.photos/id/565/200/300.jpg" style="width:100%">
-
-    </div>
-    <div class="column">
-        <img src="https://i.picsum.photos/id/565/200/300.jpg" style="width:100%">
-        <img src="https://i.picsum.photos/id/565/200/300.jpg" style="width:100%">
-        <img src="https://i.picsum.photos/id/565/200/300.jpg" style="width:100%">
-        <img src="https://i.picsum.photos/id/565/200/300.jpg" style="width:100%">
-        <img src="https://i.picsum.photos/id/565/200/300.jpg" style="width:100%">
-    </div>
-
-
 </div>
 </body>
+</html>

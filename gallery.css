@@ -1,7 +1,14 @@
-* {
+*, *::before, *::after {
     padding: 0;
     margin: 0;
+
 }
+
+html {
+    overflow-x: hidden;
+
+}
+
 .navbar {
     display: flex;
     width: 100vw;
@@ -10,6 +17,7 @@
     align-content: center;
     background-color: #191919;
     border-bottom: 1.5px solid #D05353;
+    margin: auto;
 }
 
 .nav-links {
@@ -19,12 +27,14 @@
 .nav-item {
     display: inline;
     text-decoration: none;
-    font-family: "Assistant ExtraLight";
+    font-family: 'Assistant', sans-serif;
+    font-weight: 200;
     letter-spacing: 1px;
     outline: none;
     color: white;
     margin-right: 22px;
     font-size: 24px;
+
 }
 
 .nav-item:visited {
@@ -35,40 +45,148 @@ a:link {
     text-decoration: none;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    align-content: center;
-    justify-content: center;
-    margin-top: 62px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
+.content {
     width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 30px;
+    margin-bottom: 30px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
+.container {
+    width: 97%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas: 'img-1 img-2 img-3 img-3' 'img-1 img-4 img-5 img-6' 'img-7 img-7 img-8 img-6';
+}
+
+.image-gallery a {
+    width: 100%;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.image-gallery a i {
+    color: rgba(255, 255, 255, .6);
+    font-size: 3rem;
+    position: relative;
+    z-index: 100;
+    padding: 1rem 3rem;
+    border: 2px solid rgba(255, 255, 255, .6);
+    border-radius: .4rem;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.image-gallery a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.image-gallery a:hover i, .image-gallery a:hover::before {
+    opacity: 1;
+}
+
+.img-1 {
+    grid-area: img-1;
+    background-image: url("images/img-3.jpg");
+    min-height: 51.5rem;
+
+}
+
+.img-2 {
+    grid-area: img-2;
+    background-image: url("images/img-2.jpg");
+
+}
+
+.img-3 {
+    grid-area: img-3;
+    background-image: url("images/img-1.jpg");
+
+}
+
+.img-4 {
+    grid-area: img-4;
+    background-image: url("images/img-7.jpeg");
+
+}
+
+.img-5 {
+    grid-area: img-5;
+    background-image: url("images/img-5.jpeg");
+
+}
+
+.img-6 {
+    grid-area: img-6;
+    background-image: url("images/img-6.jpg");
+    min-height: 51.5rem;
+
+}
+
+.img-7 {
+    grid-area: img-7;
+    background-image: url("images/img-2.jpg");
+    background-position: bottom;
+}
+
+.img-8 {
+    grid-area: img-8;
+    background-image: url("images/img-8.JPG");
+
+}
+
+@media screen and (max-width: 900px) {
+    .image-gallery {
+        grid-template-areas: 'img-1 img-1 img-2 img-2' 'img-1 img-1 img-3 img-3' 'img-4 img-4 img-5 img-5' 'img-6 img-6 img-7 img-7' 'img-8 img-8 img-8 img-8';
     }
+
+    .image-gallery a {
+        height: 20rem;
+    }
+
+    .img-1 {
+        min-height: 41.5rem;
+    }
+
+    .img-6 {
+        min-height: 20rem
+    }
+
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
+    .image-gallery {
+        grid-template-areas: 'img-1 img-1 img-1 img-1' 'img-2 img-2 img-2 img-2' 'img-3 img-3 img-3 img-3' 'img-4 img-4 img-4 img-4' 'img-5 img-5 img-5 img-5' 'img-6 img-6 img-6 img-6' 'img-7 img-7 img-7 img-7' 'img-8 img-8 img-8 img-8';
     }
+
+    .image-gallery a, .img-1, .img-6 {
+        height: 30rem;
+        min-height: 30rem;
+    }
+
+
 }
